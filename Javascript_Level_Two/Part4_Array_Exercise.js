@@ -9,8 +9,8 @@ var roster = []
 
 // ADD A NEW STUDENT
 function addStudent() {
-  var NewName = prompt("What name would you like to add?");
-  roster.push(NewName);
+  var newName = prompt("What name would you like to add?");
+  roster.push(newName);
 
 }
 // Create a function called addNew that takes in a name
@@ -25,7 +25,7 @@ function addStudent() {
 // HINT: http://stackoverflow.com/questions/5767325/how-to-remove-a-particular-element-from-an-array-in-javascript
 //
 function removeStudent() {
-  var remName = promt("What name would you like to remove?");
+  var remName = prompt("What name would you like to remove?");
   var index = roster.indexOf(remName);
   roster.splice(index,1);
 }
@@ -41,11 +41,11 @@ function display() {
 
 // Now create a while loop that keeps asking for an action (add,remove, display or quit)
 // Use if and else if statements to execute the correct function for each command.
-var start = promt("Would you like to start the Roster web app? y/n ");
-var request = "empty";
+var start = prompt("Would you like to start the Roster web app? y/n ");
+var request = 'empty';
 
 if (start === 'y') {
-  while (request !=== "quit") {
+  while (request != 'quit') {
     request = prompt("Please select an action: add, remove, display, or quit");
     if (request === 'add') {
       addStudent();
@@ -56,7 +56,7 @@ if (start === 'y') {
     else if (request === 'remove') {
       removeStudent();
     }else {
-      request = "quit";
+      request = 'quit';
     }
   }
 }
