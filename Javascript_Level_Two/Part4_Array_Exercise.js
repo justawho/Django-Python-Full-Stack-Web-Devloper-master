@@ -45,7 +45,7 @@ var start = prompt("Would you like to start the Roster web app? y/n ");
 var request = 'empty';
 
 if (start === 'y') {
-  while (request != 'quit') {
+  while (request !== 'quit') {
     request = prompt("Please select an action: add, remove, display, or quit");
     if (request === 'add') {
       addStudent();
