@@ -3,7 +3,8 @@
 var headOne = document.querySelector('#one')
 var headTwo = document.querySelector('#two')
 var headThree = document.querySelector('#three')
-
+var headFour = document.querySelector('#four')
+var headFive = document.querySelector('#five')
 // Hover (mouseover and mouseout)
 headOne.addEventListener('mouseover',function(){
   headOne.textContent = "Mouse currently Over";
@@ -26,4 +27,24 @@ headTwo.addEventListener("click",function(){
 headThree.addEventListener("dblclick",function(){
   headThree.textContent = "Double Clicked!";
   headThree.style.color = 'red';
+})
+
+headFour.addEventListener("wheel", function(){
+  headFour.textContent = "weeee!";
+  headFour.style.color = 'green';
+})
+
+headFive.addEventListener("online", function(){
+  headFour.textContent = "Online!";
+  headFour.style.color = 'purple';
+})
+
+headFour.addEventListener("mouseleave ", function(){
+  headFour.textContent = "Online!";
+  headFour.style.color = 'purple';
+})
+
+headFive.addEventListener("focusin", function(){
+  headFive.textContent ="focused!";
+  headFive.style.color ="gray";
 })
