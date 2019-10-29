@@ -34,9 +34,24 @@ headFour.addEventListener("wheel", function(){
   headFour.style.color = 'green';
 })
 
-if (navigator.onLine){
+headFour.addEventListener('mouseout',function(){
+  headFour.textContent = "Wheel it!"
+  headFour.style.color = 'black';
+})
+
+
+headFive.addEventListener("onLine", function(){
   headFive.textContent = "Online!";
   headFive.style.color = 'purple';
+})
+headFive.addEventListener("offline", function(){
+  headFive.textContent = "Offline!";
+  headFive.style.color = 'Gray';
+  console.log("offline");
+})
+if (navigator.onLine){
+  headFive.textContent = "Online!";
+  headFive.style.color = 'pink';
 }else{
   headFive.textContent = "Offline!";
   headFive.style.color = 'Gray';
