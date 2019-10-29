@@ -34,17 +34,11 @@ headFour.addEventListener("wheel", function(){
   headFour.style.color = 'green';
 })
 
-headFive.addEventListener("online", function(){
-  headFour.textContent = "Online!";
-  headFour.style.color = 'purple';
-})
-
-headFour.addEventListener("mouseleave ", function(){
-  headFour.textContent = "Online!";
-  headFour.style.color = 'purple';
-})
-
-headFive.addEventListener("focusin", function(){
-  headFive.textContent ="focused!";
-  headFive.style.color ="gray";
-})
+if (navigator.onLine){
+  headFive.textContent = "Online!";
+  headFive.style.color = 'purple';
+}else{
+  headFive.textContent = "Offline!";
+  headFive.style.color = 'Gray';
+  console.log("offline");
+}
